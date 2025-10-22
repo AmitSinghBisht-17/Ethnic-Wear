@@ -1,17 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
+import Home from './pages/Home';
+import Catalog from './pages/Catalog';
+import './App.css';
 
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/catalog" element={<Catalog />} />
+          </Routes>
+        </main>
+        <Footer />
+        <WhatsAppButton />
+      </div>
+    </Router>
   );
 }
 

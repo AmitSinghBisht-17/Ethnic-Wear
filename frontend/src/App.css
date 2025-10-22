@@ -1,0 +1,39 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4a574;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5e3c;
+}
+
+/* Prevent layout shift during image loading */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button hover effects */
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+}
